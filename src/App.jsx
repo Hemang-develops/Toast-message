@@ -7,10 +7,11 @@ const App = () => {
   const [position, setPosition] = useState('top-right');
   const { NotificationComponent, triggerNotification } = useNotification(position);
 
-  return (<>
-    <label htmlFor="duration">Duration:</label>
+  return (<div className='container'>
+    <div><label htmlFor="duration">Duration:</label>
     <input type="number" name="duration" id="" value={duration} onChange={(e) => setDuration(e.target.value)} />
-    <br/>
+    </div>
+    <div>
     <label htmlFor="position">Position:</label>
     <label>
     <input type="radio" name="position" id="" onChange={(e) => setPosition('top-right')} value='top-right' checked={position === 'top-right'} />top-right
@@ -24,7 +25,8 @@ const App = () => {
     <label>
     <input type="radio" name="position" id="" onChange={(e) => setPosition('bottom-left')} value='bottom-left' checked={position === 'bottom-left'}/>bottom-left
     </label>
-
+    </div>
+    
     <div className='btnContainer'>
       <button className='success btn' onClick={() => triggerNotification({
         type: 'success',
@@ -56,7 +58,7 @@ const App = () => {
       </button>
     </div>
     {NotificationComponent}
-  </>
+  </div>
   )
 }
 
