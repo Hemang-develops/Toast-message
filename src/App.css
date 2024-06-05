@@ -1,0 +1,29 @@
+.btnContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 600px;
+}
+
+.btn{
+    border: none;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: medium;
+}
+.success{
+    background-color: green;
+}
+.error{
+    background-color: red;
+}
+.info{
+    background-color: rgb(55, 55, 218);
+}
+.warning{
+    background-color: orange;
+}
